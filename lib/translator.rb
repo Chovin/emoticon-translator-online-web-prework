@@ -14,7 +14,7 @@ def load_library path
 end
 
 def get_japanese_emoticon path, emote
-  load_library(path)['get_emoticon'][emote]
+  load_library(path)['get_emoticon'][emote] || 
 end
 
 def get_english_meaning path, emote
