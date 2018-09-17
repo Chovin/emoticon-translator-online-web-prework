@@ -10,6 +10,7 @@ def load_library path
     rmean[jmote] = meaning
     remot[emote] = jmote
   end
+  ret
 end
 
 def get_japanese_emoticon
