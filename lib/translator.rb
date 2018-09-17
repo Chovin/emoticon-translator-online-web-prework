@@ -5,9 +5,10 @@ def load_library path
   dict = YAML.load_file path
   ret = {'get_meaning' => {}, 'get_emoticon' => {}}
   rmean = ret['get_meaning']
-  emean = ret['get_emoticon']
-  dict.each do |meaning, emotes|
-    
+  remot = ret['get_emoticon']
+  dict.each do |meaning, (emote, jmote)|
+    rmean[jmote] = meaning
+    remot[emote] = jmote
   end
 end
 
